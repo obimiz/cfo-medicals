@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import Logo from '../Assets/Logo.jpg'
+import Logo from '../../Assets/Logo.jpg'
 
 const Navbar = () => {
   const [menu,setMenu] = useState("home");

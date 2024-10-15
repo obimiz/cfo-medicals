@@ -1,8 +1,8 @@
 import React from 'react'
-import ourstory1 from '../Assets/ourstory1.jpg'
-import ourstory2img from '../Assets/ourstory2img.jpg'
-import bullet from '../Assets/bullet.png'
-import horizontalline from '../Assets/horizontalline.png'
+import ourstory1 from '../../Assets/ourstory1.jpg'
+import ourstory2img from '../../Assets/ourstory2img.jpg'
+import bullet from '../../Assets/bullet.png'
+import horizontalline from '../../Assets/horizontalline.png'
 
 const Ourstory = () => {
   return (
@@ -17,7 +17,7 @@ const Ourstory = () => {
       <div className="ourstory-right w-1/2 mr-[-130px] mt-5">
       <div className='flex gap-4 items-center'>
         <img className='h-4 w-1' src={horizontalline} alt="" />
-        <p className='text-xl text-[#00ADEF]'>About Us</p>
+        <p className='font-semibold text-[#00ADEF]'>About Us</p>
       </div>
      
         <h2 className='text-2xl font-semibold mt-5'>The Great Place of Medical <br /> Hospital Center. </h2> <br />
