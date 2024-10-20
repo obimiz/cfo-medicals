@@ -4,6 +4,8 @@ import Ourstory from './OurStory/ourstory';
 import Ourservices from './OurServices/Ourservices';
 import Emergency from './Emergency/Emergency';
 import Ourteam from './Ourteam/Ourteam';
+import Testimonials from './Testimonials/Testimonials';
+import Newsletter from './Newsletter/Newsletter';
 
 
 
@@ -17,6 +19,8 @@ const Home = () => {
       <Ourservices />
       <Emergency />
       <Ourteam />
+      <Testimonials />
+      <Newsletter />
     </div>
   )
 }

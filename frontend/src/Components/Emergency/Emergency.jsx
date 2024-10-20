@@ -1,7 +1,8 @@
 import React from 'react'
 import bullet from '../../Assets/bullet.png'
-import { FaPhone, FaEnvelope } from 'react-icons/fa';
 import customercare from '../../Assets/customercare.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 const Emergency = () => {
   return (
@@ -28,12 +29,14 @@ const Emergency = () => {
 	   </ul>
 	   <div className='flex gap-6'>
 		<div className='w-40 h-12 bg-[#00ADEF] rounded'>
-			<p className='text-white font-medium text-base'text-white font-medium>Phone Number <br />
-			<FaPhone color="white" size="24px" /> 07030616155</p>
+			<p className='text-white font-medium text-sm'>
+			<FontAwesomeIcon icon={faPhone} className="text-base" /> Phone Number <br /> 
+			07030616155</p>
 		</div>
 		<div className='w-40 h-12 bg-[#00ADEF] rounded'>
-			<p className='text-white font-medium'>Quick Your Mail <br />
-			<FaEnvelope /> info@cfomedicals.com</p>
+			<p className='text-white text-sm font-medium'>
+			<FontAwesomeIcon icon={faEnvelope} className="text-white mr-2 text-base" /> Quick Your Mail <br />
+			 info@cfomedicals.com</p>
 		</div>
 		<div></div>
 	   </div>

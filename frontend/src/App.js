@@ -1,11 +1,16 @@
+import React from 'react';
 import './App.css';
 import Navbar from './Components/Navbar/Navbar';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import Home from './Components/Home';
-import About from './Components/About';
-import Contact from './Components/Contact';
-import Services from './Components/Services';
-import LoginSignup from './Components/LoginSignup';
+import About from './Pages/About';
+import Contact from './Pages/Contact';
+import Services from './Pages/Services';
+import Login from './Components/LoginSignup/Login';
+import Signup from './Components/LoginSignup/Signup'
+import Footer from './Components/Footer/Footer';
+import Bookanappointment from './Components/Bookanappointment/Bookanappointment';
+
 
 
 
@@ -19,9 +24,12 @@ function App() {
         <Route path="/about" element={<About/>}/>
         <Route path="/contact" element={<Contact/>}/>
         <Route path="/services" element={<Services/>}/>
-        <Route path="/login" element={<LoginSignup/>}/>
+        <Route path="/Login" element={<Login/>}/>
+        <Route path="/Signup" element={<Signup/>}/>
+        <Route path="/Bookanappointment" element={<Bookanappointment/>}/>
 
       </Routes>
+        <Footer />
 
       </BrowserRouter>
 
