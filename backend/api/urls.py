@@ -1,4 +1,5 @@
 from django.urls import path
+from django.http import HttpResponse
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 from .views import (
     PatientListCreateView,
@@ -19,7 +20,12 @@ from .views import (
     AppointmentDetailView,
 )
 
+
+def home(request):
+    return HttpResponse("Welcome to CFO Medicals API")
+
 urlpatterns = [
+    path('', home, name='home'),
     # patients URLS
     path("patients/", PatientListCreateView.as_view(), name="patient-list-create"),
     path("patients/<int:pk>/", PatientDetailView.as_view(), name="patient-detail"),
