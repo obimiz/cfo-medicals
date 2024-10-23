@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
 const PatientSignup = () => {
   const [formData, setFormData] = useState({
@@ -17,10 +18,17 @@ const PatientSignup = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Logic to handle form submission
-    console.log('Form data submitted:', formData);
+    try {
+      // Make a POST request to the signup API
+      const response = await axios.post('https://cfo-medicals.onrender.com/api/patient/signup', formData);
+      console.log('Form data submitted:', response.data); // Log the response from the server
+      // Optionally, redirect or show a success message here
+    } catch (error) {
+      console.error('There was an error submitting the form:', error); // Log any errors
+      // Optionally, display an error message to the user
+    }
   };
 
   return (
