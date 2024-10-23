@@ -1,15 +1,16 @@
 import React from 'react'
-import ourstory1 from '../Assets/ourstory1.jpg'
-import ourstory2img from '../Assets/ourstory2img.jpg'
-import bullet from '../Assets/bullet.png'
-import horizontalline from '../Assets/horizontalline.png'
+import { Link } from 'react-router-dom'
+import ourstory1 from '../../Assets/ourstory1.jpg'
+import ourstory2img from '../../Assets/ourstory2img.jpg'
+import bullet from '../../Assets/bullet.png'
+import horizontalline from '../../Assets/horizontalline.png'
 
 const Ourstory = () => {
   return (
     <div className='h-[80vh] px-[60px] flex items-center justify-center bg-[#F5F5F5]'>
       <div className="ourstory-left w-1/2 flex">
-      <img className='w-[350px] h-[250px] mt-[-130px] ml-[-60px] rounded' src={ourstory2img} alt="" />
-      <img className='w-[250px] h-[280px] left-[400px] mt-[-20px] absolute rounded' src={ourstory1} alt="" />
+      <img className='w-[300px] h-[250px] mt-[-130px] ml-[-60px] rounded' src={ourstory2img} alt="" />
+      <img className='w-[250px] h-[230px] left-[350px] mt-[30px] absolute rounded' src={ourstory1} alt="" />
 
       </div>
 
@@ -17,7 +18,7 @@ const Ourstory = () => {
       <div className="ourstory-right w-1/2 mr-[-130px] mt-5">
       <div className='flex gap-4 items-center'>
         <img className='h-4 w-1' src={horizontalline} alt="" />
-        <p className='text-xl text-[#00ADEF]'>About Us</p>
+        <p className='font-semibold text-[#00ADEF]'>About Us</p>
       </div>
      
         <h2 className='text-2xl font-semibold mt-5'>The Great Place of Medical <br /> Hospital Center. </h2> <br />
@@ -48,7 +49,7 @@ const Ourstory = () => {
             </ul>
            
            </div>
-           <button className='bg-[#00ADEF] rounded-md outline-none text-[20px] font-semibold text-white mt-8 justify-center texts-center py-2 px-4'>Discover More</button>
+           <Link to="/about"><button className='bg-[#00ADEF] rounded-md outline-none text-[20px] font-semibold text-white mt-8 justify-center texts-center py-2 px-4'>Discover More</button></Link>
 
            
       </div>
