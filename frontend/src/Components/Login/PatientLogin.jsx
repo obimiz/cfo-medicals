@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
 const PatientLogin = () => {
   const [formData, setFormData] = useState({
@@ -13,10 +14,16 @@ const PatientLogin = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Logic to handle form submission
-    console.log('Login data submitted:', formData);
+    try {
+      const response = await axios.post('https://cfo-medicals.onrender.com/api/patient/login', formData);
+      console.log('Login successful:', response.data);
+      // Optionally redirect or show a success message
+    } catch (error) {
+      console.error('There was an error logging in:', error.response?.data || error.message);
+      // Optionally show an error message to the user
+    }
   };
 
   return (
