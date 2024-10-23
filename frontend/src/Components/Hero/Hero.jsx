@@ -21,13 +21,13 @@ const Hero = () => {
 	</p>
 
 	<button className='bg-[#00ADEF] w-[170px] h-[50px] rounded-md outline-none text-[20px] font-semibold text-white mt-8'>Meet A Doctor</button>
-  <div className='flex gap-10 font-bold text-[20px] text-start mt-8'>
-    <p>355 k+ <br />
+  <div className='flex gap-10 font-semibold text-[20px] text-start mt-8'>
+    <p>355k+ <br />
       Recovered Patient</p>
     <p>98% <br />
     Good Reviews</p>
     <p>120+ <br />
-     <span className='font-normal text-base mt-5'>Popular Doctors</span> 
+     <span>Popular Doctors</span> 
     </p>
   </div>
 
@@ -35,7 +35,7 @@ const Hero = () => {
 
       <div className="hero-right px-[30px] w-1/2">
 	      <img className='h-[540px] mt-10 w-auto ml-16' src={heroimg} alt="hero" />
-        <div className='h-12 w-40 rounded mt-[-220px] ml-2 bg-white absolute'></div>
+        {/* <div className='h-12 w-40 rounded mt-[-220px] ml-2 bg-white absolute'></div> */}
 
       </div>
     </div>

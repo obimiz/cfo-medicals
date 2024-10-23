@@ -195,7 +195,7 @@ const AppointmentBooking = () => {
           {/* Submit Button */}
           <button
             type="submit"
-            className="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 transition-colors"
+            className="w-56 h-10 ml-32 bg-blue-500 text-white text-xl font-semibold p-1 rounded-md hover:bg-blue-600 transition-colors"
           >
             Book Appointment
           </button>

@@ -1,5 +1,8 @@
 // src/pages/Contact.js
 import React, { useState } from 'react';
+import bg3 from '../Assets/bg3.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -22,13 +25,13 @@ const Contact = () => {
   };
 
   return (
-    <div className="bg-gray-100 p-8">
-      <header className="text-center mb-8">
-        <h1 className="text-4xl font-bold text-gray-800">Contact Us</h1>
-        <p className="text-gray-600 mt-2">We'd love to hear from you! Please fill out the form below to get in touch.</p>
+    <div className="bg-cover bg-center" style={{ backgroundImage: `url(${bg3})` }}>
+      <header>
+        <h1 className="text-4xl  font-bold text-gray-800  text-center">Contact Us</h1>
+    
       </header>
 
-      <div className="max-w-lg mx-auto bg-white rounded-lg shadow-md p-6">
+      <div className="max-w-lg mx-auto bg-white rounded-lg shadow-md p-6 mt-8">
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
             <label className="block text-gray-700 font-medium mb-2" htmlFor="name">
@@ -77,19 +80,28 @@ const Contact = () => {
 
           <button
             type="submit"
-            className="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 transition-colors"
+            className="w-full bg-[#00ADEF] text-white py-2 rounded-md hover:bg-blue-600 transition-colors"
           >
             Send Message
           </button>
         </form>
       </div>
 
-      <div className="mt-12 text-center">
-        <p className="text-gray-700">
-          You can also reach us at: <br />
-          <span className="font-medium">Email:</span> contact@example.com <br />
-          <span className="font-medium">Phone:</span> +1 (123) 456-7890
-        </p>
+      <div className="mt-2 rounded-lg w-[520px] h-16 bg-white shadow-2xl ml-[415px]">
+      <div className='flex gap-6 mt-5 p-2 ml-12'>
+		<div className='w-40 h-12 bg-[#00ADEF] rounded-md'>
+			<p className='text-white font-medium text-sm p-3 ml-3'>
+			<FontAwesomeIcon icon={faPhone} className="text-base mr-2" /> 
+			07030616155</p>
+		</div>
+		<div className='w-52 p-3 h-12 bg-[#00ADEF] rounded-md'>
+			<p className='text-white text-sm font-medium'>
+			<FontAwesomeIcon icon={faEnvelope} className="text-white mr-2 text-base" />
+			 info@cfomedicals.com</p>
+		</div>
+		
+	   </div>
+        
       </div>
     </div>
   );

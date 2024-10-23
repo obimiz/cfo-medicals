@@ -26,7 +26,7 @@ const Ourteam = () => {
             <div className='bg-[#00ADEF] h-14 w-48 rounded'>
               <p className='text-white ml-2'>Dr. Philip Tunder</p>
               <span className='text-white ml-2'>Cardiologist</span>
-              <span className='w-32 h-9 bg-[#00ADEF] rounded-full absolute top-[2500px]'>social media</span>
+              {/* <span className='w-32 h-9 bg-[#00ADEF] rounded-full absolute top-[2500px]'>social media</span> */}
               </div>
           </div>
           <div><img className='rounded-md w-48 h-48 bg-white' src={Doc3} alt="" />
